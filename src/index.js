@@ -6,6 +6,9 @@ let content = viewport.querySelector('#partners-carrousel');
 const firstDot = document.querySelector('#first-dot');
 const secondDot = document.querySelector('#second-dot');
 const thirdDot = document.querySelector('#third-dot');
+const carussel = document.getElementById('partners-carrousel')
+
+
 let sb = new ScrollBooster({
 viewport, // this parameter is required
 content, // scrollable element
@@ -22,14 +25,16 @@ secondDot.className = 'active';
 }else if(data.position.x > 1200){
 document.querySelector('.active').classList.remove("active");
 thirdDot.className = 'active';
-console.log(data.position.x)
+
 }
 }
 });
-let positionOne = () => 'content.style.transform = translateX(-10px)';
+
+function positionOne(){carussel.style.transform = 'translateX(-10px)'; console.log('click');};
 firstDot.onclick = positionOne;
-secondDot.onclick = () => 'content.style.transform = translateX(-610px)';
-thirdDot.onclick = () => 'content.style.transform = translateX(-1210px)';
+secondDot.onclick = () => {content.style.transform = 'translateX(-610px)';console.log('click')}
+thirdDot.onclick = () => content.style.transform = 'translateX(-1210px)';
+
 
 
 

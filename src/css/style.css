@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: auto;
+
+
 }
 
 body {
@@ -206,7 +207,7 @@ h3 {
 
 #timeline ul {
     position: relative;
-  margin-top: 80px;
+    margin-top: 80px;
 }
 
 #timeline ul::before {
@@ -233,7 +234,7 @@ h3 {
 }
 
 .timeline-article {
-    width: 40%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -303,7 +304,7 @@ padding: 50px;
 }
 .done-orders-carrousel{
 display: flex;
-    justify-content: space-between;
+  justify-content: space-between;
 }
 .done-order-item{
    max-width: 350px;
@@ -358,4 +359,102 @@ justify-content: space-between;
     margin-top: 100px;
 }
 
+@media only screen and (max-width: 1050px) {
 
+  header{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(24, 25, 34);
+    height: 90px;
+    padding: 0 10%;
+    position: fixed;
+    width: 100%;
+
+  }
+  .content-wrapper{
+    width: 100%;
+  }
+  ul.link-menu{
+    display: none;
+  }
+  .row-3-cols {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .col{
+    margin: 10px;
+  }
+
+  #timeline li:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  #timeline li{
+    justify-content: space-around;
+    margin-left: 100px;
+    width: 100%;
+
+  }
+
+  .timeline-circle {
+
+    left: 20%;
+    margin-left: -50px;
+    padding: 25px 0;
+    color: #0b5393;
+  }
+  #timeline ul::before {
+    left: 20%;
+
+  }
+  .done-order-item:first-child{
+    display: none;
+  }
+  .done-order-item{
+    margin: 15px;
+  }
+  .done-orders-carrousel{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .contacts {
+    flex-wrap: wrap;
+
+  }
+
+  h3{
+    margin: 50px 0;
+  }
+
+
+iframe{
+  display: flex;
+  width: 600px;
+}
+}
+
+@media only screen and (max-width: 650px) {
+  .header{
+    flex-direction: column;
+    height: 200px;
+  }
+  .header-content-wrapper {
+    padding: 50px 0;
+  }
+  #timeline li{
+    margin-left: 0;
+  }
+  .timeline-article {
+    width: 90%;
+  }
+  .timeline-circle{
+    display: none;
+  }
+  #timeline ul::before{
+    display: none;
+  }
+  iframe{
+    display: flex;
+    width: 300px;
+  }
+}
