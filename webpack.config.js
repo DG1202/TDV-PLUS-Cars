@@ -14,11 +14,11 @@ let conf = {
 		},
     module: {
     	rules: [
-			{
-				test: /\.js$/,
-	      loader: 'babel-loader',
-				exclude: '/node modules/'
-			}
+			// {
+			// 	test: /\.js$/,
+	    //   loader: 'babel-loader',
+			// 	exclude: '/node modules/'
+			// }
 			]
 		},
 		plugins: [
