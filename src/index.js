@@ -30,25 +30,38 @@ thirdDot.className = 'active';
 }
 });
 
-// function positionOne(){carussel.style.transform = 'translateX(-10px)'; console.log('click');};
-// firstDot.onclick = positionOne;
-// secondDot.onclick = () => {content.style.transform = 'translateX(-610px)';console.log('click')}
-// thirdDot.onclick = () => content.style.transform = 'translateX(-1210px)';
-const phoneNumber = document.getElementById('tlf').value;
-const name = document.getElementById('userName').value;
-const message = `${name}: ${phoneNumber}`;
-const email = 'dimagnat@ukr.net';
-const subject = 'js email';
-document.getElementById('btn').onclick = (function() {
+// // function positionOne(){carussel.style.transform = 'translateX(-10px)'; console.log('click');};
+// // firstDot.onclick = positionOne;
+// // secondDot.onclick = () => {content.style.transform = 'translateX(-610px)';console.log('click')}
+// // thirdDot.onclick = () => content.style.transform = 'translateX(-1210px)';
+// const phoneNumber = document.getElementById('tlf').value;
+// const name = document.getElementById('userName').value;
+// const message = `${name}: ${phoneNumber}`;
+// const email = 'dimagnat@ukr.net';
+// const subject = 'js email';
+// document.getElementById('btn').onclick = (function() {
+//
+// const mailto_link = 'mailto:' + email + '?subject=' + subject + '&body=' + message;
+//
+// const win = window.open(mailto_link, 'emailWindow');
+// if (win && win.open && !win.closed) win.close();
+// document.getElementById('tlf').value = '';
+// document.getElementById('userName').value = ''
+// });
 
-const mailto_link = 'mailto:' + email + '?subject=' + subject + '&body=' + message;
+/*let Email = { send: function (a) { return new Promise(function (n, e) { a.nocache = Math.floor(1e6 * Math.random() + 1), a.Action = "Send"; var t = JSON.stringify(a); Email.ajaxPost("https://smtpjs.com/v3/smtpjs.aspx?", t, function (e) { n(e) }) }) }, ajaxPost: function (e, n, t) { var a = Email.createCORSRequest("POST", e); a.setRequestHeader("Content-type", "application/x-www-form-urlencoded"), a.onload = function () { var e = a.responseText; null != t && t(e) }, a.send(n) }, ajax: function (e, n) { var t = Email.createCORSRequest("GET", e); t.onload = function () { var e = t.responseText; null != n && n(e) }, t.send() }, createCORSRequest: function (e, n) { var t = new XMLHttpRequest; return "withCredentials" in t ? t.open(e, n, !0) : "undefined" != typeof XDomainRequest ? (t = new XDomainRequest).open(e, n) : t = null, t } };
 
-const win = window.open(mailto_link, 'emailWindow');
-if (win && win.open && !win.closed) win.close();
-
-});
-
-
+document.getElementById('btn').onclick = () => Email.send({
+Host : "smtp.yourisp.com",
+Username : "username",
+Password : "password",
+To : 'dimagnat@ukr.net',
+From : "dimagnat@ukr.net",
+Subject : "This is the subject",
+Body : "And this is the body"
+}).then(
+	message => alert(message)
+)*/
 
 
 
