@@ -291,7 +291,7 @@ padding: 50px;
 }
 
 #done-orders{
- background-image: url('../img/lamborghini-city-cars_3.jpg');
+    background:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../img/lamborghini-city-cars_3.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -308,7 +308,7 @@ display: flex;
 }
 .done-order-item{
    max-width: 350px;
-background-color: darkgrey;
+   //background-color: darkgrey;
     margin: 50px ;
 }
 
@@ -406,7 +406,7 @@ justify-content: space-between;
     left: 20%;
 
   }
-  .done-order-item:first-child{
+  .done-order-item:last-child{
     display: none;
   }
   .done-order-item{
