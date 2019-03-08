@@ -64,6 +64,11 @@ header{
 }
 .logo a{
   font-size: 30px;
+  color: #ff9a18;
+}
+
+.logo a:hover{
+  border: none;
 }
 ul.link-menu {
     list-style: none;
@@ -219,9 +224,8 @@ h3 {
     left: 50%;
     margin-left: -1px;
     top: 0;
-    bottom: 100px;
+    bottom: 96px;
     border: 1px solid #ffffff;
-    //border-width: 0 1px 0 1px;
     color: #ffffff;
 }
 
@@ -316,6 +320,9 @@ display: flex;
 .done-order-item img{
    max-width: 100%;
 }
+.price{
+  color: #ff9a18;
+}
 #contact{
   margin: 50px;
   padding: 50px;
@@ -357,7 +364,7 @@ background-color: rgb(24, 25, 34);
 display: flex;
 justify-content: space-between;
     padding: 40px;
-    margin-top: 100px;
+
 }
 
 @media only screen and (max-width: 1050px) {
@@ -397,7 +404,6 @@ justify-content: space-between;
   }
 
   .timeline-circle {
-
     left: 20%;
     margin-left: -50px;
     padding: 25px 0;
@@ -417,6 +423,9 @@ justify-content: space-between;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+  }
+  .price{
+    color: #ff9a18;
   }
   .contacts {
     flex-wrap: wrap;
