@@ -30,11 +30,23 @@ thirdDot.className = 'active';
 }
 });
 
-function positionOne(){carussel.style.transform = 'translateX(-10px)'; console.log('click');};
-firstDot.onclick = positionOne;
-secondDot.onclick = () => {content.style.transform = 'translateX(-610px)';console.log('click')}
-thirdDot.onclick = () => content.style.transform = 'translateX(-1210px)';
+// function positionOne(){carussel.style.transform = 'translateX(-10px)'; console.log('click');};
+// firstDot.onclick = positionOne;
+// secondDot.onclick = () => {content.style.transform = 'translateX(-610px)';console.log('click')}
+// thirdDot.onclick = () => content.style.transform = 'translateX(-1210px)';
+const phoneNumber = document.getElementById('tlf').value;
+const name = document.getElementById('userName').value;
+const message = `${name}: ${phoneNumber}`;
+const email = 'dimagnat@ukr.net';
+const subject = 'js email';
+document.getElementById('btn').onclick = (function() {
 
+const mailto_link = 'mailto:' + email + '?subject=' + subject + '&body=' + message;
+
+const win = window.open(mailto_link, 'emailWindow');
+if (win && win.open && !win.closed) win.close();
+
+});
 
 
 
